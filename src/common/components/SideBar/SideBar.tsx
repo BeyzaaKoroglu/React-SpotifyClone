@@ -5,14 +5,19 @@ import {
   faHeadphonesAlt,
   faHeart,
   faPlayCircle,
-  faSearch, faStream,
+  faSearch, faStream, IconDefinition,
 } from '@fortawesome/free-solid-svg-icons';
 import { ReactComponent as Avatar } from '../../../assets/images/avatar.svg';
 import './_sidebar.scss';
 
 //TODO: Fix types here
 
-const renderSideBarOption = (link: any, icon: any, text: any, { selected }: any = {}) => {
+const renderSideBarOption = (
+  link: string,
+  icon: IconDefinition,
+  text: string,
+  { selected }: { selected?: boolean } = {}
+) => {
   return (
     <div
       className={cx('sidebar__option', { 'sidebar__option--selected': selected })}
